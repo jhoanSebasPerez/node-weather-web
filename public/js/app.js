@@ -8,7 +8,7 @@ messageTwo.textContent = "";
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  fetch(`http://localhost:4000/weather?address=${address.value}`)
+  fetch(`/weather?address=${address.value}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.error) {
